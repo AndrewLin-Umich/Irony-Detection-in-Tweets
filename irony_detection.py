@@ -32,7 +32,6 @@ class text_data:
             X = [re.sub(r'http[s]?://[\S]+', '' ,i[2]) for i in self.data if int(i[1]) == label]
         else:
             X = [re.sub(r'http[s]?://[\S]+', '' ,i[2]) for i in self.data]
-        
         return X
 
     def labels(self):
