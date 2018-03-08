@@ -71,7 +71,24 @@ class text_data:
         
         seq = sequence.pad_sequences(seq, maxlen=max_sent_length)
         return seq
-
+    
+    def add_extra_features(self, *extra_features):
+        
+        """
+        Adds new features to the texts sequences.
+        
+        IN:
+            ndarrays with the same number of rows as the text_sequences.
+        OUT:
+            New ndarrays with the added features on the left.
+        """
+        seq = self.text_sequences()
+        for feat in extra_features:
+            if feat.shape[0] != self.length:
+                raise ValueError('Size of array does not match')
+            seq = np.hstack((feat, seq))
+        return seq 
+    
 def open_parse_file(x):
     
     """
