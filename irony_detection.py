@@ -109,8 +109,7 @@ def build_model3(n_words=5000,
                 max_sent_length=200, 
                 dropout_rate=0.25,
                 n_neuron_elu=5,
-                regularization = None
-               ):
+                regularization = None):
 
     """
     Builds the LSTM model.
