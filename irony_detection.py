@@ -103,7 +103,7 @@ def open_parse_file(x):
     return training_set[1:]
 
 
-def build_model3(n_words=5000, 
+def build_model(n_words=5000, 
                 embedding_length=20, 
                 n_neuron_lstm=50, 
                 max_sent_length=200, 
